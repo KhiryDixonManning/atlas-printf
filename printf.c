@@ -9,6 +9,11 @@
  */
 int _printf(const char *format, ...)
 {
+    if (format == NULL)
+    {
+        return (-1);
+    }
+
     int count = 0;  // Character count
     va_list args;   // Argument list
 
