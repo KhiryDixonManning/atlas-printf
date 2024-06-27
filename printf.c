@@ -83,7 +83,7 @@ int _printf(const char *format, ...)
 
 int main()
 {
-    int chars_printed = _printf("Character: %c, String: %s, Percent: %%\n", 'A', "Hello, World!");
+    int chars_printed = _printf("Character: %c\n" "String: %s\n" "Percent: %%\n", 'A', "Hello, World!");
     printf("Characters printed: %d\n", chars_printed);
     return 0;
 }
