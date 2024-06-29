@@ -66,6 +66,9 @@ The `_printf` function aims to replicate core features of the standard `printf` 
 +---+------------------------------------+
     |
     v
+   +---+------------------------------------+
+   | Continue loop                          |
+   +---+------------------------------------+    
 ```
 
 ## Example Usage
