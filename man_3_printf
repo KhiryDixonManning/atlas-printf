@@ -7,7 +7,13 @@ Synopsis
 int _printf(const char *format, ...)
 
 Description
-The _printf function produces output according to a format, similar to the standard library printf function. The function writes output to stdout, the standard output stream. The format string is composed of zero or more directives that include ordinary characters and conversion specifications.
+The _printf function produces output according to a format, 
+similar to the standard library printf function. The function 
+writes output to stdout, the standard output stream. The format 
+string is composed of zero or more directives that include 
+ordinary characters and conversion specifications.
 
 Parameters
-format: A constant character string composed of zero or more directives. The directives specify how subsequent arguments (or arguments accessed via the variable-length argument mechanism) are converted for output.
+format: A constant character string composed of zero or more directives. 
+The directives specify how subsequent arguments (or arguments accessed via 
+the variable-length argument mechanism) are converted for output.
