@@ -15,5 +15,6 @@ ordinary characters and conversion specifications.
 
 Parameters
 format: A constant character string composed of zero or more directives. 
-The directives specify how subsequent arguments (or arguments accessed via 
+The directives specify how sub
+sequent arguments (or arguments accessed via 
 the variable-length argument mechanism) are converted for output.

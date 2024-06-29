@@ -14,16 +14,16 @@ int _printf(const char *format, ...)
         return (-1);
     }
 
-    int count = 0;  // Character count
-    va_list args;   // Argument list
+    int count = 0;  /*Character count*/
+    va_list args;   /*Argument list*/
 
-    // Initialize the argument list
+    /*Initialize the argument list*/
     va_start(args, format);
 
-    // Process the format string
+    /*Process the format string*/
     for (const char *p = format; *p != '\0'; p++)
     {
-        // If the current character is not '%', print it as is
+        /*If the current character is not '%', print it as is*/
         if (*p != '%')
         {
             putchar(*p);
@@ -31,15 +31,15 @@ int _printf(const char *format, ...)
             continue;
         }
 
-        // Move to the next character after '%'
+        /*Move to the next character after '%'*/
         p++;
 
-        // Handle the conversion specifier
+        /*Handle the conversion specifier*/
         switch (*p)
         {
             case 'c':
             {
-                // Print a character
+                /*Print a character*/
                 char c = (char) va_arg(args, int);
                 putchar(c);
                 count++;
@@ -47,7 +47,7 @@ int _printf(const char *format, ...)
             }
             case 's':
             {
-                // Print a string
+                /*Print a string*/
                 const char *s = va_arg(args, const char *);
                 while (*s)
                 {
@@ -59,14 +59,14 @@ int _printf(const char *format, ...)
             }
             case '%':
             {
-                // Print a percent symbol
+                /*Print a percent symbol*/
                 putchar('%');
                 count++;
                 break;
             }
             default:
             {
-                // Print unknown specifier as is
+                /*Print unknown specifier as is*/
                 putchar('%');
                 putchar(*p);
                 count += 2;
@@ -75,10 +75,10 @@ int _printf(const char *format, ...)
         }
     }
 
-    // Clean up the argument list
+    /*Clean up the argument list*/
     va_end(args);
 
-    return count;  // Return the number of characters printed
+    return count;  /*Return the number of characters printed*/
 }
 
 int main()
